@@ -13,9 +13,9 @@ after_success:
   - docker build -t nathandh22/multi-nginx ./nginx
   - docker build -t nathandh22/multi-server ./server
   - docker build -t nathandh22/multi-worker ./worker
-  # Log into the Docker CLI.
+  # Log into the Docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  # Take those images and push them into Docker Hub.
+  # Take those images and push them into Docker Hub
   - docker push nathandh22/multi-client
   - docker push nathandh22/multi-nginx
   - docker push nathandh22/multi-server
